@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+    <TITLE>ERICA GORDON RAMSAY FAN CLUB</TITLE>
+    
+</head>
+
+<body>
+	<p>
+		<h2>Hello <strong>world</strong></h2>
+        
+		<h6>this is the</h6>
+        
+        <h1>GORDON RAMSAY FAN CLUB </h1><p>
+            
+            
+            <img src="http://cdn.realscreen.com/wp/wp-content/uploads/2017/08/Gordon-Ramsay.jpg?60980e">
+            
+            <br>
+            <a target="_blank" href="https://www.google.com/search?q=cats&btnI=1">Do you like cats?</a> <br><br>
+        
+        <form>
+            <input id="ReviewTitleArea"/> <br>
+            <textarea id="ReviewTextArea" placeholder="Enter your review here"></textarea>
+            <button type="button" id="ReviewSaveButton">Save review</button>
+        </form>
+
+        <div id="Reviews">
+            <div class="review">
+                <p id="ReviewFeedback">Yo</p>
+            </div>
+
+        </div>    
+
+            <script>
+                function addReview() {
+                    //alert - pop up
+                    //console.log
+                    console.log("start of addReview function");
+                    console.log(ReviewTextArea.value);
+
+                    var beforeHTML = Reviews.innerHTML;
+                    var newReview = createReviewDiv();
+
+                   Reviews.innerHTML = newReview + " " + beforeHTML;
+                }
+
+            
+            function createReviewDiv() {
+                var feedback = ReviewTextArea.value;
+                var reviewTitle = ReviewTitleArea.value;
+                var s = `<div class="review">
+                <h2>${reviewTitle}</h2> 
+                <p>${feedback}</p>
+            </div>`
+            return s;
+
+            }
+
+        ReviewSaveButton.onclick = addReview;
+
+
+            </script>
+            
+        </body>
+        
+        </html>
+        
