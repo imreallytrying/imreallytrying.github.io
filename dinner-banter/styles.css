@@ -56,7 +56,7 @@ button{font:inherit;cursor:pointer}
 .peek-grid{display:grid;grid-template-columns:1fr;gap:26px;margin-top:26px}
 .peek{margin:0}
 .phone{background:var(--ink);border-radius:30px;padding:9px;box-shadow:0 14px 30px #243e3222;max-width:300px;margin:0 auto}
-.phone img{border-radius:22px;width:100%}
+.phone img{border-radius:22px;width:100%;height:auto}
 .peek figcaption{max-width:300px;margin:14px auto 0;color:var(--muted);font-size:15px}
 .peek figcaption strong{color:var(--ink);font-family:var(--display);font-weight:400;font-size:21px;margin-right:4px}
 .extras{list-style:none;padding:0;margin:34px auto 0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
