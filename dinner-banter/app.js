@@ -54,6 +54,7 @@ spinBtn.addEventListener("click", () => {
   rotation += 360 * 5 + ((target - current + 360) % 360);
   spinBtn.disabled = true;
   result.hidden = true;
+  document.getElementById("spin-announce").textContent = "";
   wheel.style.transform = `rotate(${rotation}deg)`;
   setTimeout(() => {
     const [, , name, note, photo] = meals[pick];
@@ -63,6 +64,7 @@ spinBtn.addEventListener("click", () => {
     img.src = `food/${photo}.jpg`;
     img.alt = name;
     result.hidden = false;
+    document.getElementById("spin-announce").textContent = `Tonight, you’re having ${name}. ${note}`;
     spinBtn.disabled = false;
     spinBtn.firstChild.textContent = "Spin again ";
   }, reduceMotion ? 50 : 3450);
